@@ -3,7 +3,7 @@ body{
 }
 .image-container {
     width: 100vw; /* Full width of viewport */
-    height: 400px; /* Adjust height as needed */
+    height: 350px; /* Adjust height as needed */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -63,7 +63,7 @@ body{
     font-size: 30px;
     border: #EFA3C4;
     position: fixed;
-    top: 450px;
+    top: 400px;
        margin-top: 50px;
        margin-left: 470px;
     
