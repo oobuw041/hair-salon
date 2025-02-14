@@ -9,10 +9,19 @@
     font-family:AmstelvarAlpha;
     font-size: 20px;
   }
+  /* Media query for smaller screens (like mobile) */
+@media (max-width: 768px) {
+  .custom-bg {
+      font-size: 1rem; /* Smaller font size on smaller screens */
+  }
+}
   .navbar-nav .nav-item {
     padding-right: 45px; /* Adjust space between items */
     margin-right: 10px;
     color: #EFA3C4;
+    position: relative; /* Make the navbar position relative so that z-index works */
+  z-index: 10; /* Adjust this number if needed to bring the navbar in front */
+  top: 0px;
 }
 .navbar-nav .nav-item a{
   text-decoration: none;
@@ -45,9 +54,11 @@
   padding: 20px;
 }
 
+
 .dropdown-menu{
   background-color: #880D1E;
 }
+
 .image-container {
     width: 100vw; /* Full width of viewport */
     height: 350px; /* Adjust height as needed */
@@ -57,6 +68,7 @@
     align-items: center;
     position: fixed;
     top: 140px;
+ 
 }
 
 .expanding-image {
@@ -65,12 +77,25 @@
     object-fit: cover; /* Ensures it covers properly */
     
 }
+/* For small screens */
+@media (max-width: 768px) {
+  .image-container {
+      height: 250px; /* Reduce height for small screens */
+      top: 100px; /* Adjust top position */
+      position: relative; /* Allow the image to stack under the navbar */
+   z-index: 1; /* This ensures the image stays behind the navbar */
+  }
+
+  .expanding-image {
+      object-fit: cover; /* Ensures the image covers well */
+  }
+}
+
 .content{
   position: fixed;
   top: 520px;
   left: 440px;
   size: 500px;
-  
   }
   .content a{
     font-size: 70px;
@@ -79,7 +104,23 @@
     border-radius: 0%;
      border-width:3px;
   }
+/* For small screens */
+@media (max-width: 768px) {
+  .content {
+    top: 140px; /* Adjust vertical positioning for smaller screens */
+    left: 10px; /* Adjust horizontal positioning */
+    width: 80%; /* Allow the content to span the full width */
+    position: relative; /* Allow the image to stack under the navbar */
+    z-index: 1; /* This ensures the image stays behind the navbar */
+  }
 
+  .content a {
+    font-size: 40px; /* Reduce font size for smaller screens */
+    padding: 10px 20px; /* Add padding for clickable buttons */
+    text-align: center;
+    
+  }
+}
   /* Location Page*/
   #location{
     background-color:#ffffff;
@@ -107,6 +148,36 @@
     width: 1000px;
     height: 500px;
 }
+
+/* For small screens */
+@media (max-width: 768px) {
+  #location {
+    padding: 10px; /* Reduce padding for small screens */
+    margin: 20px; /* Reduce margin */
+    width: auto; /* Make width dynamic */
+    height: auto; /* Make height dynamic */
+    top: 100px; /* Adjust top for smaller screens */
+    left: 20px; /* Adjust left for smaller screens */
+    float: none; /* Remove float to align better */
+    position: relative;
+  }
+
+  #location p {
+    font-size: 16px; /* Smaller font size for smaller screens */
+    top: 200px; /* Adjust vertical positioning */
+    left: 20px; /* Align text better */
+    position: static; /* Allow text to flow naturally */
+  }
+
+  .map {
+    position: relative;
+    top: 550px; /* Adjust map position */
+    left: 0px; /* Align map to the left */
+    width: 20%; /* Make map take full width */
+    height: 50px; /* Adjust height for small screens */
+  }
+}
+
 /* About Page*/
 .about{
   position: fixed;
@@ -146,6 +217,39 @@
   width: 1070px;
   
 }
+
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+  .about {
+    position: static; /* Allow the container to flow */
+    width: 90%; /* Make the about section take up more width */
+    height: auto; /* Make the height dynamic */
+    top: auto; /* Remove fixed position */
+    left: auto; /* Center it */
+    margin: 20px auto; /* Center the section */
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .aboutImg, .afro {
+    position: relative;
+    height: 150px; /* Reduce the image size */
+    width: 150px;
+    margin: 10px;
+    top: 0; /* Reset top position */
+    left: 0; /* Reset left position */
+    float: none; /* Stack images vertically */
+  }
+
+  .content2 {
+    position: static; /* Allow the content to flow */
+    width: 90%; /* Make the content width dynamic */
+    top: 0; /* Reset top position */
+    left: 0; /* Reset left position */
+    margin: 20px auto; /* Center content */
+  }
+}
+
 /* Contact Page*/
 .contact{
   position: fixed;
@@ -162,6 +266,19 @@
   border-color: #EFA3C4;
   border-width:3px;
 }
+
+@media (max-width: 768px) {
+  .contact {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .contact button {
+    width: 100%;
+    font-size: 18px;
+  }
+}
 /*booking page*/
 .container button{
   font-size: 20px;
@@ -171,6 +288,14 @@
   border-color: #EFA3C4;
   border-width:3px;
 }
+@media (max-width: 768px) {
+  .container button {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+
 /*Braids page*/ 
 .Imagebox{
   width: 250px;
@@ -199,3 +324,77 @@
   
 }
 
+@media (max-width: 768px) {
+  .Imagebox {
+    width: 100%;
+    height: auto;
+  }
+
+  .custom-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .custom-card .card-img-top {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+
+  .custom-card button {
+    font-size: 18px;
+  }
+
+  .custom-card .card-body {
+    padding: 10px; /* Adjust padding for small screens */
+  }
+}
+/*Confirmation Page*/
+#confirmation{
+  background-color:#ffffff;
+  color: #030303;
+  padding: 180px;
+  margin: 50px;
+ width: 100px;
+  height: 100px;
+ position: fixed;
+ top: 90px;
+ left: 800px;
+ float: left;
+}
+#confirmation p{
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  top: 210px;
+  left: 920px;
+}
+.policies{
+  position: relative;
+  margin-left: 40px;
+}
+@media (max-width: 768px) {
+ #confirmation {
+    padding: 10px; /* Reduce padding for small screens */
+    margin: 20px; /* Reduce margin */
+    width: auto; /* Make width dynamic */
+    height: auto; /* Make height dynamic */
+    top: 100px; /* Adjust top for smaller screens */
+    left: 20px; /* Adjust left for smaller screens */
+    float: none; /* Remove float to align better */
+    position: relative;
+  }
+
+  #confirmation p {
+    font-size: 16px; /* Smaller font size for smaller screens */
+    top: 200px; /* Adjust vertical positioning */
+    left: 20px; /* Align text better */
+    position: static; /* Allow text to flow naturally */
+  }
+
+  .policies {
+    position: relative;
+    top: 150px; /* Adjust map position */
+    left: 0px; /* Align map to the left */
+    width: 100%; /* Make map take full width */
+    height: 50px; /* Adjust height for small screens */
+  }
+}
