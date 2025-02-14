@@ -157,19 +157,17 @@ body{
     position: relative;
     height: 215px;
     width: 215px;
-    top: 130px;
+    top: 120px;
     border-radius: 30px;
     margin: 30px;
     float: left;
-    left: 50px;
-
-    
+    left: 50px;   
  }
  #afro{
     position: relative;
     width: 220px;
     height: 220px;
-    top: 240px;
+    top: 250px;
  }
  /* twist page */
  .Grid-container{
