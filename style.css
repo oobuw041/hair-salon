@@ -56,7 +56,7 @@
 
 
 .dropdown-menu{
-  background-color: #880D1E;
+  background-color: #000000;
 }
 
 .image-container {
@@ -76,6 +76,13 @@
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensures it covers properly */
     
+}
+.pink{
+  width: 100%; /* Fully covers the width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures it covers properly */
+  background-color: #efa3c4ef;
+  z-index: 1000;
 }
 /* For small screens */
 @media (max-width: 768px) {
