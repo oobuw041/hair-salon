@@ -86,8 +86,8 @@
     <section id="services">
       <div class="content2">
         <img src="Images/twist.png" alt="services" class="circleImg" id="twist">
-        <img src="Images/braids.png" alt="services" class="circleImg">
-        <img src="Images/natural.png" alt="services" class="circleImg">
+        <img src="Images/braids.png" alt="services" class="circleImg" id="braids">
+        <img src="Images/natural.png" alt="services" class="circleImg" id="natural">
       </div>
       <div>
         <a href="twists.html">
@@ -117,8 +117,8 @@
     </section>
 
     <section id="location">
+      <h1>Find Us!</h1>
       <div class="map">
-        
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d369104.4791771755!2d-79.70770733204994!3d43.71826387722457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1739148549500!5m2!1sen!2sca" 
         width="600" 
         height="450" 
@@ -154,7 +154,7 @@
       <label for="exampleFormControlInput1" class="form-label">Name</label>
       <input type="text" class="form-control" id="exampleInputPassword1">
     </div>
-    <form>
+    <form id="contactform">
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
@@ -172,11 +172,6 @@
   </div>
   <div class="mb-3 d-grid gap-2 col-4 mx-auto">
     <button type="submit" class="btn btn-outline-light" onclick="showMessage()">Submit</button>
-    <script>
-      function showMessage() {
-          alert("Thank you for contacting us! We will get back to you shortly.");
-      }
-      </script>
     </div>
   </form>
   
@@ -184,8 +179,6 @@
 
     </section>
 
-          <!-- Bootstrap js-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-     
+ <script src="app.js"></script>
 </body>
 </html>

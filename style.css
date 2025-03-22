@@ -66,6 +66,18 @@ html {
             font-weight: bold;
             
         }
+        @media (max-width: 768px){
+          section {
+          position: relative;
+            height: 50vh; /* Full screen height */ 
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+          }
+
+        }
+  
 
  #home {
           background: #060606; color: white;
@@ -79,6 +91,19 @@ html {
   top: 0px;
   height: 700px;
   overflow: hidden;
+ }
+
+ @media (max-width:768px) {
+  #services{
+    background-color: #EFA3C4;
+    position: relative;
+    top: 0px;
+    height: 1000px;
+    overflow: hidden;
+    visibility: hidden;
+    display: none;
+   }
+  
  }
 
 .dropdown-menu{
@@ -195,8 +220,25 @@ background-color: transparent;
    z-index: 1; /* This ensures the image stays behind the navbar */
   }
 
+
   .expanding-image {
       object-fit: cover; /* Ensures the image covers well */
+  }
+  #button{
+    position:absolute;
+    top: 200px;
+    left: 190px;
+    border: solid;
+    border-color: #EFA3C4;
+    border-width: 5px;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 50px;
+    color: #EFA3C4;
+    font-family:AmstelvarAlpha;
+    animation-name:slideup ;
+    animation-duration: 2s;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -263,32 +305,47 @@ background-color: transparent;
     width: 1000px;
     height: 500px;
 }
-
+#location h1{
+  text-align: center;
+  position: relative;
+  top: 70px;
+}
 /* For small screens */
 @media (max-width: 768px) {
-  #location {
-    padding: 10px; /* Reduce padding for small screens */
-    margin: 20px; /* Reduce margin */
-    width: auto; /* Make width dynamic */
-    height: auto; /* Make height dynamic */
-    top: 100px; /* Adjust top for smaller screens */
-    left: 20px; /* Adjust left for smaller screens */
-    float: none; /* Remove float to align better */
+  #location{
+    position: relative;
+    height: 1000px;
+    overflow: hidden;
+  }
+  #loc {
+    padding: 10px; 
+    margin: 20px; 
+    width: auto; 
+    height: auto; 
+    top: 100px; 
+    left: 20px;
+    float: none; 
     position: relative;
   }
 
-  #location p {
-    font-size: 16px; /* Smaller font size for smaller screens */
-    top: 200px; /* Adjust vertical positioning */
-    left: 20px; /* Align text better */
-    position: static; /* Allow text to flow naturally */
+  #loc p {
+    font-size: 16px; 
+    top: 200px; 
+    left: 20px; 
+    position: static; 
+    text-decoration: none;
+  }
+  #location h1{
+    text-align: center;
+    position: relative;
+    top: 120px;
   }
 
   .map {
     position: relative;
     top: 550px; /* Adjust map position */
-    left: 0px; /* Align map to the left */
-    width: 20%; /* Make map take full width */
+    left: 20px; /* Align map to the left */
+    width: 10%; /* Make map take full width */
     height: 50px; /* Adjust height for small screens */
   }
 }
@@ -342,32 +399,41 @@ background-color: transparent;
 
 /* Adjustments for small screens */
 @media (max-width: 768px) {
+  #about{
+    position: relative;
+    top: 0px;
+    height: 550px;
+    overflow: hidden;
+  }
   .about {
-    position: static; /* Allow the container to flow */
-    width: 90%; /* Make the about section take up more width */
-    height: auto; /* Make the height dynamic */
-    top: auto; /* Remove fixed position */
-    left: auto; /* Center it */
-    margin: 20px auto; /* Center the section */
-    font-size: 16px; /* Smaller font size */
+    position: absolute; 
+    width: 90%;
+    height: auto; 
+    top: 200px; 
+    left:  50px; 
+    margin: 20px auto; 
+    font-size: 18px; 
   }
 
   .aboutImg, .afro {
     position: relative;
-    height: 150px; /* Reduce the image size */
+    height: 150px; 
     width: 150px;
     margin: 10px;
-    top: 0; /* Reset top position */
-    left: 0; /* Reset left position */
-    float: none; /* Stack images vertically */
+    top: 100px; 
+    left: 350px; 
+    float: none; 
   }
-
+  .afro{
+    top: 120px; 
+    left: 250px; 
+  }
   .content2 {
-    position: static; /* Allow the content to flow */
-    width: 90%; /* Make the content width dynamic */
-    top: 0; /* Reset top position */
-    left: 0; /* Reset left position */
-    margin: 20px auto; /* Center content */
+    position: static; 
+    width: 90%; 
+    top: 0; 
+    left: 0;
+    margin: 20px auto;
   }
 }
 
@@ -399,11 +465,22 @@ background-color: transparent;
 }
 
 @media (max-width: 768px) {
+
+  #contact{
+    position: relative;
+   height: 600px;
+    margin: 20px auto;
+    background-color: #880D1E;
+  }
   .contact {
     position: static;
     width: 90%;
+    top: 0px;
     margin: 20px auto;
   }
+  #contact h1 {
+    position: relative;
+    top: 0px;}
 
   .contact button {
     width: 100%;
