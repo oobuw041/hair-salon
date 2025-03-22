@@ -80,7 +80,7 @@ html {
   
 
  #home {
-          background: #060606; color: white;
+         background-color: #880D1E;
           font-family: 'Times New Roman', Times, serif; 
          }
          
@@ -190,10 +190,8 @@ background-color: transparent;
   font-size: 75px;
   color: #EFA3C4;
   font-family:AmstelvarAlpha;
-  animation-name:slideup ;
-  animation-duration: 2s;
-  transition: all 0.3s ease-in-out;
 }
+
 #button:hover{
   animation-name: glow;
   animation-duration: infinite;
@@ -201,33 +199,31 @@ background-color: transparent;
 @keyframes glow {
   50%{box-shadow: 0 0 20px 10px #eebfd4;}
 }
-@keyframes slideup {
-  from{transform: translateY(300%);}
-}
+
 .pink{
-  width: 100%; /* Fully covers the width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensures it covers properly */
+  width: 100%;
+  height: auto; 
+  object-fit: cover; 
   background-color: #efa3c4ef;
   z-index: 1000;
 }
 /* For small screens */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .image-container {
-      height: 250px; /* Reduce height for small screens */
-      top: 100px; /* Adjust top position */
-      position: relative; /* Allow the image to stack under the navbar */
-   z-index: 1; /* This ensures the image stays behind the navbar */
+      height: 250px; 
+      top: 100px; 
+      position: relative; 
+   z-index: 1;
   }
 
 
   .expanding-image {
-      object-fit: cover; /* Ensures the image covers well */
+      object-fit: cover; 
   }
   #button{
     position:absolute;
-    top: 200px;
-    left: 190px;
+    top: 210px;
+    left: 170px;
     border: solid;
     border-color: #EFA3C4;
     border-width: 5px;
@@ -256,7 +252,7 @@ background-color: transparent;
      border-width:3px;
   }
 /* For small screens */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .content {
     top: 140px; /* Adjust vertical positioning for smaller screens */
     left: 10px; /* Adjust horizontal positioning */
@@ -402,7 +398,7 @@ background-color: transparent;
   #about{
     position: relative;
     top: 0px;
-    height: 550px;
+    height: 850px;
     overflow: hidden;
   }
   .about {
@@ -420,13 +416,13 @@ background-color: transparent;
     height: 150px; 
     width: 150px;
     margin: 10px;
-    top: 100px; 
-    left: 350px; 
+    top: 295px; 
+    right: 0px;
     float: none; 
   }
   .afro{
-    top: 120px; 
-    left: 250px; 
+    top: 280px; 
+    left: 130px; 
   }
   .content2 {
     position: static; 
