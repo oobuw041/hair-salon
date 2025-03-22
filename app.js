@@ -1,6 +1,6 @@
 //const contactForm = document.getElementById("contactform")
 
-function showMessage() {
+function showMessage() { //place holder
     alert("Thank you for contacting us! We will get back to you shortly.");
 }
 
