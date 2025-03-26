@@ -3,27 +3,29 @@ html {
 } 
 @font-face {
     font-family:AmstelvarAlpha;
-    src: url(Website/fonts/AmstelvarAlpha-Variations-noHVAR.ttf);
+    src: url(Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
   }
 /* Index Page*/
   .custom-bg {
     background-color: #880D1E;
     color: #EFA3C4;
-    font-family:AmstelvarAlpha;
-    font-size: 20px;
+    font-family:Playfair;
+    font-size: 25px;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   }
   /* Media query for smaller screens (like mobile) */
 @media (max-width: 768px) {
   .custom-bg {
-      font-size: 1rem; /* Smaller font size on smaller screens */
+      font-size: 1rem; 
   }
 }
   .navbar-nav .nav-item {
-    padding-right: 45px; /* Adjust space between items */
+    padding-right: 45px; 
     margin-right: 10px;
     color: #EFA3C4;
-    position: relative; /* Make the navbar position relative so that z-index works */
-  z-index: 10; /* Adjust this number if needed to bring the navbar in front */
+    position: relative; 
+  z-index: 10; 
   top: 0px;
 }
 .navbar-nav .nav-item a{
@@ -46,9 +48,9 @@ html {
  
 }
 .navbar-nav .nav-item i {
-  pointer-events: none; /* Prevents hover effects */
-  color: inherit !important; /* Keeps original color */
-  text-decoration: none !important; /* Removes underline if any */
+  pointer-events: none; 
+  color: inherit !important; 
+  text-decoration: none !important; 
   
 }
 .navbar-nav .nav-item a:hover{
@@ -59,7 +61,7 @@ html {
 
  section {
             position: relative;
-            height: 100vh; /* Full screen height */ 
+            height: 100vh; 
             align-items: center;
             justify-content: center;
             font-size: 2rem;
@@ -69,7 +71,7 @@ html {
         @media (max-width: 768px){
           section {
           position: relative;
-            height: 50vh; /* Full screen height */ 
+            height: 50vh; 
             align-items: center;
             justify-content: center;
             font-size: 2rem;
@@ -89,7 +91,7 @@ html {
   background-color: #880D1E;
   position: relative;
   top: 0px;
-  height: 700px;
+  height: 150vh; 
   overflow: hidden;
  }
 
@@ -114,7 +116,7 @@ html {
 #services .content2 {
   display: flex;
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 9%;
   gap: 50px;
 }
@@ -144,8 +146,8 @@ background-color: transparent;
   width: 350px;
   height: 80px;
   position: relative;
-  top: 430px;
-  left: 35px;
+  top: 620px;
+  left: 30px;
   float: left;
 
 }
@@ -159,7 +161,7 @@ background-color: transparent;
 }
 .image-container {
     width: 100vw; /* Full width of viewport */
-    height: 350px; /* Adjust height as needed */
+    height: 350px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -170,15 +172,15 @@ background-color: transparent;
 }
 
 .expanding-image {
-    width: 100%; /* Fully covers the width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensures it covers properly */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
     position: relative;
     top: 0px;
     left: 0px;
     
 }
-#button{
+#booKNow{
   position:absolute;
   top: 500px;
   left: 430px;
@@ -192,13 +194,6 @@ background-color: transparent;
   font-family:AmstelvarAlpha;
 }
 
-#button:hover{
-  animation-name: glow;
-  animation-duration: infinite;
-}
-@keyframes glow {
-  50%{box-shadow: 0 0 20px 10px #eebfd4;}
-}
 
 .pink{
   width: 100%;
@@ -232,9 +227,6 @@ background-color: transparent;
     font-size: 50px;
     color: #EFA3C4;
     font-family:AmstelvarAlpha;
-    animation-name:slideup ;
-    animation-duration: 2s;
-    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -254,16 +246,16 @@ background-color: transparent;
 /* For small screens */
 @media (min-width: 481px) and (max-width: 768px) {
   .content {
-    top: 140px; /* Adjust vertical positioning for smaller screens */
-    left: 10px; /* Adjust horizontal positioning */
-    width: 80%; /* Allow the content to span the full width */
-    position: relative; /* Allow the image to stack under the navbar */
-    z-index: 1; /* This ensures the image stays behind the navbar */
+    top: 140px; 
+    left: 10px; 
+    width: 80%; 
+    position: relative; 
+    z-index: 1; 
   }
 
   .content a {
-    font-size: 40px; /* Reduce font size for smaller screens */
-    padding: 10px 20px; /* Add padding for clickable buttons */
+    font-size: 40px; 
+    padding: 10px 20px; 
     text-align: center;
     
   }
@@ -451,15 +443,19 @@ background-color: transparent;
   width: 1070px;
   
 }
-.contact button{
+#contactbtn{
   font-size: 20px;
   color:#EFA3C4;
    width: 400px;
   border-radius: 0%;
   border-color: #EFA3C4;
   border-width:3px;
+  background-color: transparent;
 }
-
+#contactbtn:hover{
+  animation-name: glow;
+  animation-duration: infinite;
+}
 @media (max-width: 768px) {
 
   #contact{
@@ -600,5 +596,39 @@ background-color: transparent;
     left: 0px; /* Align map to the left */
     width: 100%; /* Make map take full width */
     height: 50px; /* Adjust height for small screens */
+  }
+}
+
+/* Default*/
+.submitted{
+  background-color:rgba(0, 0, 0, 0.923)!important ;
+  color:rgb(251, 245, 245) !important;
+  border:none;
+  
+}
+.hover {
+  animation-name: glow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  box-shadow: 0 0 20px 10px #eebfd4 !important;  
+}
+
+@keyframes glow {
+  50%{box-shadow: 0 0 20px 10px #eebfd4;}
+}
+
+.slideUp{
+  animation-name: slideUp;
+  animation-duration: 2s;
+  animation-iteration-count: forwards;
+}
+
+@keyframes slideUp {
+  from{
+    transform: translateY(300%);
+  
+  }
+  to{
+    transform: translateY(0);
   }
 }
