@@ -160,7 +160,7 @@ background-color: transparent;
   left: 100px;
 }
 .image-container {
-    width: 100vw; /* Full width of viewport */
+    width: 500vw; /* Full width of viewport */
     height: 350px;
     overflow: hidden;
     display: flex;
@@ -191,7 +191,9 @@ background-color: transparent;
   padding: 7px;
   font-size: 75px;
   color: #EFA3C4;
-  font-family:AmstelvarAlpha;
+}
+#booknav{
+border-color: #EFA3C4!important;
 }
 
 
@@ -204,6 +206,12 @@ background-color: transparent;
 }
 /* For small screens */
 @media (min-width: 481px) and (max-width: 768px) {
+
+ #home {
+  background-color: #880D1E;
+   font-family: 'Times New Roman', Times, serif; 
+   height:100vh;
+  }
   .image-container {
       height: 250px; 
       top: 100px; 
@@ -215,20 +223,21 @@ background-color: transparent;
   .expanding-image {
       object-fit: cover; 
   }
-  #button{
+
+  #booKNow{
     position:absolute;
-    top: 210px;
-    left: 170px;
+    top: 220px;
+    left: 160px;
     border: solid;
     border-color: #EFA3C4;
     border-width: 5px;
     text-decoration: none;
-    padding: 5px;
-    font-size: 50px;
+    padding: 7px;
+    font-size: 55px;
     color: #EFA3C4;
-    font-family:AmstelvarAlpha;
   }
 }
+
 
 .content{
   position: fixed;
@@ -452,32 +461,38 @@ background-color: transparent;
   border-width:3px;
   background-color: transparent;
 }
-#contactbtn:hover{
-  animation-name: glow;
-  animation-duration: infinite;
-}
+
 @media (max-width: 768px) {
 
   #contact{
     position: relative;
-   height: 600px;
-    margin: 20px auto;
+   height: 120vh;
+    margin: 15px auto;
     background-color: #880D1E;
   }
   .contact {
     position: static;
-    width: 90%;
+    width: 80%;
     top: 0px;
     margin: 20px auto;
+    font-size: 25px;
   }
   #contact h1 {
     position: relative;
     top: 0px;}
 
-  .contact button {
-    width: 100%;
-    font-size: 18px;
+  
+  #contactbtn{
+    font-size: 20px;
+    color:#EFA3C4;
+     width: 250px;
+    border-radius: 0%;
+    border-color: #EFA3C4;
+    border-width:3px;
+    background-color: transparent;
+    font-size: 20px;
   }
+  
 }
 /*booking page*/
 .container button{
@@ -632,3 +647,17 @@ background-color: transparent;
     transform: translateY(0);
   }
 }
+
+.popUp {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.popUp.show {
+  opacity: 1;
+}
+
+.image {
+  max-width: 100%;
+}
+
