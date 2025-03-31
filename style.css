@@ -20,13 +20,17 @@ html {
       font-size: 1rem; 
   }
 }
+.navbar {
+  padding: 30px 20px !important;  /* Increase top and bottom padding */
+}
+
   .navbar-nav .nav-item {
     padding-right: 45px; 
     margin-right: 10px;
     color: #EFA3C4;
     position: relative; 
-  z-index: 10; 
-  top: 0px;
+   z-index: 10; 
+   top: 0px;
 }
 .navbar-nav .nav-item a{
   text-decoration: none;
@@ -576,7 +580,7 @@ border-color: #EFA3C4!important;
  float: left;
 }
 #confirmation p{
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   position: fixed;
   top: 210px;
@@ -585,6 +589,7 @@ border-color: #EFA3C4!important;
 .policies{
   position: relative;
   margin-left: 40px;
+   font-size: 25px;
 }
 @media (max-width: 768px) {
  #confirmation {
