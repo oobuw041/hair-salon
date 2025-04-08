@@ -57,12 +57,27 @@ html {
   text-decoration: none !important; 
   
 }
+.nav-item::after{
+  background-color: hsl(334, 60%, 79%);
+  content: "";
+  width:0;
+  height:3px;
+  left:0;
+  bottom: 0;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+}
+
+ .nav-item:hover::after{
+  width: 100%;
+}
+/*
 .navbar-nav .nav-item a:hover{
   background-color: hsl(334, 60%, 79%);
   color: #880D1E;
   padding: 20px;
 }
-
+*/
  section {
             position: relative;
             height: 100vh; 
