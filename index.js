@@ -72,7 +72,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 elements.forEach(element => {
   observer.observe(element);
 });
-
+});
 
 /*validation
 const form = document.getElementById('contactbtn');
