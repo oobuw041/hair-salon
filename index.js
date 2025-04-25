@@ -72,5 +72,55 @@ const observer = new IntersectionObserver((entries, observer) => {
 elements.forEach(element => {
   observer.observe(element);
 });
+
+
+/*validation
+const form = document.getElementById('contactbtn');
+
+ 
+  form.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  let errorMessages = [];
+  const name = document.getElementById('exampleInputName').value;
+  const email = document.getElementById('exampleInputEmail').value;
+  const phone = document.getElementById('exampleInputPhone').value;
+  const message = document.getElementById('exampleFormControlTextarea1').value;
+
+  // Validate Name
+  if (name.trim() === '') {
+      errorMessages.push("Name is required.");
+  }
+
+  // Validate Email
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (email.trim() === '') {
+      errorMessages.push("Email address is required.");
+  } else if (!emailPattern.test(email)) {
+      errorMessages.push("Please enter a valid email address.");
+  }
+
+
+  const phonePattern = /^\d{10}$/; 
+  if (phone.trim() === '') {
+      errorMessages.push("Phone number is required.");
+  } else if (!phonePattern.test(phone)) {
+      errorMessages.push("Please enter a valid phone number.");
+  }
+
+ 
+  if (message.trim() === '') {
+      errorMessages.push("Message is required.");
+  }
+
+
+  const errorDiv = document.getElementById('errorMessages');
+  if (errorMessages.length > 0) {
+      errorDiv.innerHTML = errorMessages.join('<br>');
+  } else {
+      errorDiv.innerHTML = ''; 
+      alert("Form submitted successfully!"); 
+  }
 });
 
+*/

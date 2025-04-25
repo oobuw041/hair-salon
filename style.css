@@ -1,5 +1,9 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
 html {
-  scroll-behavior: smooth; /* Enables smooth scrolling */
+  scroll-behavior: smooth; 
 } 
 @font-face {
     font-family:AmstelvarAlpha;
@@ -11,8 +15,6 @@ html {
     color: #EFA3C4;
     font-family:Playfair;
     font-size: 25px;
-    -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   }
   /* Media query for smaller screens (like mobile) */
 @media (max-width: 768px) {
@@ -223,13 +225,19 @@ border-color: #EFA3C4!important;
   background-color: #efa3c4ef;
   z-index: 1000;
 }
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* For small screens */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 370px) and (max-width: 768px) {
 
  #home {
   background-color: #880D1E;
    font-family: 'Times New Roman', Times, serif; 
-   height:100vh;
+   height:40vh;
   }
   .image-container {
       height: 250px; 
@@ -245,24 +253,24 @@ border-color: #EFA3C4!important;
 
   #booKNow{
     position:absolute;
-    top: 220px;
+    top: 190px;
     left: 160px;
     border: solid;
     border-color: #EFA3C4;
     border-width: 5px;
     text-decoration: none;
     padding: 7px;
-    font-size: 55px;
+    font-size: 30px;
     color: #EFA3C4;
   }
 }
 
 
 .content{
-  position: fixed;
-  top: 520px;
-  left: 440px;
-  size: 500px;
+  position: relative;
+  top:0px;
+  left: 0px;
+  size: 100px;
   }
   .content a{
     font-size: 70px;
@@ -537,7 +545,7 @@ border-color: #EFA3C4!important;
 }
 
 .custom-card {
-  height: 300px; /* Adjust as needed */
+  height: 310px;
   width: 250px;
  
  border-color: #880D1E;
@@ -547,13 +555,13 @@ border-color: #EFA3C4!important;
 }
 
 .custom-card .card-img-top {
-  height: 170px; /* Adjust image height */
-  object-fit: cover; /* Keep aspect ratio */
+  height: 170px; 
+  object-fit: cover; 
   
 }
 
 .custom-card .card-body {
-  padding: 0px; /* Reduce padding */
+  padding: 0px; 
   
   
 }
@@ -570,7 +578,7 @@ border-color: #EFA3C4!important;
   }
 
   .custom-card .card-img-top {
-    height: 150px; /* Adjust image height for smaller screens */
+    height: 150px; 
   }
 
   .custom-card button {
@@ -578,7 +586,7 @@ border-color: #EFA3C4!important;
   }
 
   .custom-card .card-body {
-    padding: 10px; /* Adjust padding for small screens */
+    padding: 10px; 
   }
 }
 /*Confirmation Page*/
@@ -602,35 +610,46 @@ border-color: #EFA3C4!important;
   left: 920px;
 }
 .policies{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   margin-left: 40px;
-   font-size: 25px;
+   font-size: 3rem;
 }
+.flex{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 @media (max-width: 768px) {
  #confirmation {
-    padding: 10px; /* Reduce padding for small screens */
-    margin: 20px; /* Reduce margin */
-    width: auto; /* Make width dynamic */
-    height: auto; /* Make height dynamic */
-    top: 100px; /* Adjust top for smaller screens */
-    left: 20px; /* Adjust left for smaller screens */
-    float: none; /* Remove float to align better */
+    padding: 10px; 
+    margin: 20px; 
+    width: auto;
+    height: auto;
+    top: 100px; 
+    left: 20px; 
+    float: none; 
     position: relative;
   }
 
   #confirmation p {
-    font-size: 16px; /* Smaller font size for smaller screens */
-    top: 200px; /* Adjust vertical positioning */
-    left: 20px; /* Align text better */
-    position: static; /* Allow text to flow naturally */
+    font-size: 16px;
+    top: 200px; 
+    left: 20px;
+    position: static; 
   }
 
   .policies {
     position: relative;
-    top: 150px; /* Adjust map position */
-    left: 0px; /* Align map to the left */
-    width: 100%; /* Make map take full width */
-    height: 50px; /* Adjust height for small screens */
+    top: 150px;
+    left: 0px;
+    width: 100%; 
+    height: 50px;
   }
 }
 
