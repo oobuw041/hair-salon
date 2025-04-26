@@ -27,5 +27,7 @@
 - Enabling dynamic service listing updates (add/change services without code changes)
 - Exploring future authentication for client-only areas
 
+## Website Preview
 
+![Hair Salon Website Screenshot](images/screenshot.png)
 🔗Live Demo:https://oobuw041.github.io/hair-salon/
