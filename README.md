@@ -28,6 +28,4 @@
 - Exploring future authentication for client-only areas
 
 ## Website Preview
-
-![Hair Salon Website Screenshot](Mockup/home.png)
 🔗Live Demo:https://oobuw041.github.io/hair-salon/
