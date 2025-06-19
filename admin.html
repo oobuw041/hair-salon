@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HairHub Admin Dashboard</title>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- Bootstrap for styling (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="p-4 bg-light">
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const auth = urlParams.get("auth");
+
+// Only show admin access if URL has correct auth param
+if (auth === "hairhub") {
+  const correctPassword = "hairhubboss"; // your actual password
+  const userInput = prompt("Enter admin password:");
+
+  if (userInput !== correctPassword) {
+    alert("Access denied 😤");
+    window.location.href = "index.html";
+  }
+} else {
+  // No access at all if ?auth=hairhub isn't in URL
+  alert("Restricted access.");
+  window.location.href = "index.html";
+}
+
+</script>
+
+<h1 class="text-center mb-4">HairHub Bookings 📋</h1>
+
+<div class="container">
+  <table class="table table-striped" id="bookingTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Service</th>
+        <th>Size</th>
+        <th>Extra</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody id="bookingList">
+      <!-- Bookings will load here -->
+    </tbody>
+  </table>
+</div>
+
+<script>
+  // 🔌 Firebase config
+  const firebaseConfig = {
+  apiKey: "AIzaSyDcBy29MbRRdCH1MRghck86O9fgiUChGQM",
+  authDomain: "hairwebsite-85fa8.firebaseapp.com",
+  projectId: "hairwebsite-85fa8",
+  storageBucket: "hairwebsite-85fa8.firebasestorage.app",
+  messagingSenderId: "46121165455",
+  appId: "1:46121165455:web:645ec8fc1d7cb4278946fa",
+  measurementId: "G-971LKJ8X88"
+};
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // 📥 Fetch and display bookings
+  db.collection("bookings").orderBy("date").get().then((querySnapshot) => {
+    const table = document.getElementById("bookingList");
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      const docId = doc.id;
+      const row = `
+      <tr id="row-${docId}">
+          <td>${data.date}</td>
+          <td>${data.time || "-"}</td>
+          <td>${data.name}</td>
+          <td>${data.phone}</td>
+          <td>${data.service}</td>
+          <td>${data.size}</td>
+          <td>${data.extra}</td>
+          <td class="text-center align-middle" style="width: 80px;">
+            <input type="checkbox" onchange="deleteBooking('${docId}', this)" title="Remove booking" /></td>
+
+        </tr>
+      `;
+      table.innerHTML += row;
+    });
+  }).catch((error) => {
+    console.error("Error fetching bookings:", error);
+    alert("Couldn't load bookings 😢");
+  });
+
+  function deleteBooking(id, checkbox) {
+  if (checkbox.checked) {
+    if (confirm("Are you sure you want to delete this booking?")) {
+      db.collection("bookings").doc(id).delete().then(() => {
+        document.getElementById(`row-${id}`).remove();
+        alert("Booking deleted 🗑️");
+      }).catch((error) => {
+        console.error("Error deleting booking: ", error);
+        alert("Error deleting booking.");
+      });
+    } else {
+      checkbox.checked = false; // reset if canceled
+    }
+  }
+}
+</script>
+
+</body>
+</html>
